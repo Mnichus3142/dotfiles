@@ -1,0 +1,15 @@
+{
+    "appearance": {
+        "transparency": {
+            "enabled": true
+        }
+    },
+    "bar": {
+        "status": {
+            "showBluetooth": true
+        }
+    },
+    "services": {
+        "useTwelveHourClock": true
+    }
+}

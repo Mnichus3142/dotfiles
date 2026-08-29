@@ -1,0 +1,19 @@
+[Default Applications]
+text/html=helium.desktop
+x-scheme-handler/http=helium.desktop
+x-scheme-handler/https=helium.desktop
+x-scheme-handler/about=helium.desktop
+x-scheme-handler/unknown=helium.desktop
+x-scheme-handler/jetbrains=jetbrainsd.desktop
+x-scheme-handler/air=jetbrains-air.desktop
+x-scheme-handler/postman=Postman.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-JHX4T3.desktop
+x-scheme-handler/mid=userapp-Thunderbird-JHX4T3.desktop
+message/rfc822=userapp-Thunderbird-JHX4T3.desktop
+x-scheme-handler/net.thunderbird=userapp-Thunderbird-JL8BU3.desktop
+
+[Added Associations]
+x-scheme-handler/mailto=userapp-Thunderbird-JHX4T3.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-JHX4T3.desktop;
+message/rfc822=userapp-Thunderbird-JHX4T3.desktop;
+x-scheme-handler/net.thunderbird=userapp-Thunderbird-JL8BU3.desktop;

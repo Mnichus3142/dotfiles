@@ -1,0 +1,22 @@
+# Secrets and credentials
+.ssh/
+.gnupg/
+.netrc
+.env
+*.pem
+*.key
+.config/gh/
+.config/github-copilot/
+.config/Cursor/
+.config/cursor/
+
+# Caches, logs, machine-local state
+.cache/
+.local/
+.config/dconf/
+.config/pulse/
+.config/**/*.log
+.config/nvim.log
+.config/fish/fish_variables
+__pycache__/
+*.pyc
