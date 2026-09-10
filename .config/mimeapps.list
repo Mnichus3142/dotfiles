@@ -11,6 +11,7 @@ x-scheme-handler/mailto=userapp-Thunderbird-JHX4T3.desktop
 x-scheme-handler/mid=userapp-Thunderbird-JHX4T3.desktop
 message/rfc822=userapp-Thunderbird-JHX4T3.desktop
 x-scheme-handler/net.thunderbird=userapp-Thunderbird-JL8BU3.desktop
+x-scheme-handler/nymvpn=nym-vpn-app-handler.desktop
 
 [Added Associations]
 x-scheme-handler/mailto=userapp-Thunderbird-JHX4T3.desktop;
