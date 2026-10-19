@@ -20,3 +20,6 @@
 .config/fish/fish_variables
 __pycache__/
 *.pyc
+
+# Personal projects. A nested git repo would otherwise be recorded as a gitlink.
+/Projekty/
