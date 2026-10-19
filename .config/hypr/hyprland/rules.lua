@@ -105,19 +105,27 @@ hl.window_rule({
     rounding  = 10,
 })
 
--- Special workspaces
-hl.window_rule({ match = { class = "btop" }, workspace = "special:sysmon" })
-hl.window_rule({
-    match     = {
-        class = "feishin|Spotify|Supersonic|Cider|com.github.th_ch.youtube_music|Plexamp|com-maxrave-simpmusic-MainKt",
-    },
-    workspace = "special:music",
-})
-hl.window_rule({ match = { initial_title = "Spotify( %(?Free%)?)?" }, workspace = "special:music" }) -- Spotify wayland, it has no class for some reason
-hl.window_rule({ match = { class = "discord|equibop|vesktop|whatsapp" }, workspace = "special:communication" })
-hl.window_rule({ match = { class = "Todoist" }, workspace = "special:todo" })
-hl.window_rule({ match = { class = "org.telegram.desktop" }, workspace = "special:telegram" })
-hl.window_rule({ match = { class = "org.mozilla.Thunderbird" }, workspace = "special:thunderbird" })
+-- Special workspaces stay hidden until toggled. Apps still get notifications;
+-- they just must not steal focus or switch the active workspace.
+local function special_ws(match, workspace)
+    hl.window_rule({
+        match             = match,
+        workspace         = workspace .. " silent",
+        no_initial_focus  = true,
+        focus_on_activate = false,
+        suppress_event    = "activate,activatefocus",
+    })
+end
+
+special_ws({ class = "btop" }, "special:sysmon")
+special_ws({
+    class = "feishin|Spotify|Supersonic|Cider|com.github.th_ch.youtube_music|Plexamp|com-maxrave-simpmusic-MainKt",
+}, "special:music")
+special_ws({ initial_title = "Spotify( %(?Free%)?)?" }, "special:music") -- Spotify wayland, it has no class for some reason
+special_ws({ class = "discord|equibop|vesktop|whatsapp" }, "special:communication")
+special_ws({ class = "Todoist" }, "special:todo")
+special_ws({ class = "org.telegram.desktop|telegram-desktop|Telegram" }, "special:telegram")
+special_ws({ class = "org.mozilla.Thunderbird" }, "special:thunderbird")
 
 -------------------------
 ---- Workspace rules ----
